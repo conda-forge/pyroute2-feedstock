@@ -1,42 +1,337 @@
 {% set name = "pyroute2" %}
-{% set version = "0.5.18" %}
-
+{% set version = "0.6.5" %}
 
 package:
-  name: {{ name|lower }}
+  name: {{ name|lower }}-split
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyroute2-{{ version }}.tar.gz
-  sha256: 08ac40cad52c0bb2e0f20087520599aa91fcce0b221dd26e9042330428810bc5
+  - url: https://pypi.io/packages/source/p/pyroute2/pyroute2-{{ version }}.tar.gz
+    sha256: d0995c8aeb96c0e4eed4d62e97c9d795000a1a33b747d6dc54326665857cf11c
+    folder: pyroute2
+
+  - url: https://pypi.io/packages/source/p/pyroute2.core/pyroute2.core-{{ version }}.tar.gz
+    sha256: 266d740eae40fa64dd04541f007d34db696cecf3154cba5be30fa75a67d43852
+    folder: pyroute2.core
+
+  - url: https://pypi.io/packages/source/p/pyroute2.ethtool/pyroute2.ethtool-{{ version }}.tar.gz
+    sha256: caf8014b676521135c4760d72cf5aeef6abbc7fa275210f7e95333073cc7715a
+    folder: pyroute2.ethtool
+
+  - url: https://pypi.io/packages/source/p/pyroute2.ipdb/pyroute2.ipdb-{{ version }}.tar.gz
+    sha256: f2028fd1013d8af888150d033eecf7537657a4be37e0cccea9800809961eb577
+    folder: pyroute2.ipdb
+
+  - url: https://pypi.io/packages/source/p/pyroute2.ipset/pyroute2.ipset-{{ version }}.tar.gz
+    sha256: ae527c0f999748230a1f688d9a2b7c257b2df6d74369f44eca530d007793b79d
+    folder: pyroute2.ipset
+
+  - url: https://pypi.io/packages/source/p/pyroute2.ndb/pyroute2.ndb-{{ version }}.tar.gz
+    sha256: a4d309584e9ef6c7842af4f832b48fc5344ab225e70e384baed1b7fe2b94d9f8
+    folder: pyroute2.ndb
+
+  - url: https://pypi.io/packages/source/p/pyroute2.nftables/pyroute2.nftables-{{ version }}.tar.gz
+    sha256: b1455a63a3efc050d108d550d1cafd011edded6e894d99e7bdfa02d592bf6f16
+    folder: pyroute2.nftables
+
+  - url: https://pypi.io/packages/source/p/pyroute2.nslink/pyroute2.nslink-{{ version }}.tar.gz
+    sha256: 292e6c2832a73544c1c6d5ba727f7117aa847e55f88d78e94b7d4607b299999e
+    folder: pyroute2.nslink
+
+  - url: https://pypi.io/packages/source/p/pyroute2.minimal/pyroute2.minimal-{{ version }}.tar.gz
+    sha256: e5b641945c8997bd6ebcf7cd4ec83a4b940151c8a065ef995e4e5c0adfcb73ac
+    folder: pyroute2.minimal
 
 build:
   number: 0
-  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - pip
     - python
   run:
     - python
-    - win_inet_pton  # [win]
 
-test:
-  imports:
-    - pyroute2
-    - pyroute2.bsd
-  commands:
-    - pip check
-  requires:
-    - pip
+outputs:
+  - name: pyroute2.core
+    build:
+      noarch: python
+      script:
+        - cd pyroute2.core
+        - {{ PYTHON }} -m pip install --no-deps . -vv
+    requirements:
+      host:
+        - python >=3.6
+        - pip
+      run:
+        - python >=3.6
+        - psutil >=5.0
+    test:
+      imports:
+        - pr2modules
+        - pr2modules.bsd
+      commands:
+        - pip check
+      requires:
+        - pip
+    about:
+      home: https://github.com/svinota/pyroute2
+      summary: 'Python Netlink library: the core'
+      license: GPL-2.0-or-later OR Apache-2.0
+      license_file:
+        - LICENSE.GPL.v2
+        - LICENSE.Apache.v2
+
+  - name: pyroute2.ethtool
+    build:
+      noarch: python
+      script:
+        - cd pyroute2.ethtool
+        - {{ PYTHON }} -m pip install --no-deps . -vv
+    requirements:
+      host:
+        - python >=3.6
+        - pip
+      run:
+        - python >=3.6
+        - pyroute2.core
+    test:
+      imports:
+        - pr2modules
+        # Import fails on Windows due to lack of fcntl
+        # - pr2modules.ethtool
+      commands:
+        - pip check
+      requires:
+        - pip
+    about:
+      home: https://github.com/svinota/pyroute2
+      summary: 'Python Netlink library: ethtool'
+      license: GPL-2.0-or-later OR Apache-2.0
+      license_file:
+        - LICENSE.GPL.v2
+        - LICENSE.Apache.v2
+
+  - name: pyroute2.ipdb
+    build:
+      noarch: python
+      script:
+        - cd pyroute2.ipdb
+        - {{ PYTHON }} -m pip install --no-deps . -vv
+    requirements:
+      host:
+        - python >=3.6
+        - pip
+      run:
+        - python >=3.6
+        - pyroute2.core
+    test:
+      imports:
+        - pr2modules
+        - pr2modules.ipdb
+      commands:
+        - pip check
+      requires:
+        - pip
+    about:
+      home: https://github.com/svinota/pyroute2
+      summary: 'Python Netlink library: IPDB module'
+      license: GPL-2.0-or-later OR Apache-2.0
+      license_file:
+        - LICENSE.GPL.v2
+        - LICENSE.Apache.v2
+
+  - name: pyroute2.ipset
+    build:
+      noarch: python
+      script:
+        - cd pyroute2.ipset
+        - {{ PYTHON }} -m pip install --no-deps . -vv
+    requirements:
+      host:
+        - python >=3.6
+        - pip
+      run:
+        - python >=3.6
+        - pyroute2.core
+    test:
+      imports:
+        - pr2modules
+      commands:
+        - pip check
+      requires:
+        - pip
+    about:
+      home: https://github.com/svinota/pyroute2
+      summary: 'Python Netlink library: ipset'
+      license: GPL-2.0-or-later OR Apache-2.0
+      license_file:
+        - LICENSE.GPL.v2
+        - LICENSE.Apache.v2
+
+  - name: pyroute2.ndb
+    build:
+      noarch: python
+      entry_points:
+        - pyroute2-cli = pr2modules.ndb.cli:run
+      script:
+        - cd pyroute2.ndb
+        - {{ PYTHON }} -m pip install --no-deps . -vv
+    requirements:
+      host:
+        - python >=3.6
+        - pip
+      run:
+        - python >=3.6
+        - pyroute2.core
+        - pyroute2.nslink
+    test:
+      imports:
+        - pr2modules
+        - pr2modules.cli
+      commands:
+        - pip check
+        - pyroute2-cli --help
+      requires:
+        - pip
+    about:
+      home: https://github.com/svinota/pyroute2
+      summary: 'Python Netlink library: NDB module'
+      license: GPL-2.0-or-later OR Apache-2.0
+      license_file:
+        - LICENSE.GPL.v2
+        - LICENSE.Apache.v2
+
+  - name: pyroute2.nftables
+    build:
+      noarch: python
+      script:
+        - cd pyroute2.nftables
+        - {{ PYTHON }} -m pip install --no-deps . -vv
+    requirements:
+      host:
+        - python >=3.6
+        - pip
+      run:
+        - python >=3.6
+        - pyroute2.core
+    test:
+      imports:
+        - pr2modules
+        - pr2modules.nftables
+      commands:
+        - pip check
+      requires:
+        - pip
+    about:
+      home: https://github.com/svinota/pyroute2
+      summary: 'Python Netlink library: nftables'
+      license: GPL-2.0-or-later OR Apache-2.0
+      license_file:
+        - LICENSE.GPL.v2
+        - LICENSE.Apache.v2
+
+  - name: pyroute2.nslink
+    build:
+      noarch: python
+      script:
+        - cd pyroute2.nslink
+        - {{ PYTHON }} -m pip install --no-deps . -vv
+    requirements:
+      host:
+        - python >=3.6
+        - pip
+      run:
+        - python >=3.6
+        - pyroute2.core
+    test:
+      imports:
+        - pr2modules
+        - pr2modules.nslink
+      commands:
+        - pip check
+      requires:
+        - pip
+    about:
+      home: https://github.com/svinota/pyroute2
+      summary: 'Python Netlink library: NetNS, NSPopen and remote modules'
+      license: GPL-2.0-or-later OR Apache-2.0
+      license_file:
+        - LICENSE.GPL.v2
+        - LICENSE.Apache.v2
+
+  - name: pyroute2.minimal
+    build:
+      noarch: python
+      script:
+        - cd pyroute2.minimal
+        - {{ PYTHON }} -m pip install --no-deps . -vv
+    requirements:
+      host:
+        - python >=3.6
+        - pip
+      run:
+        - python >=3.6
+        - pyroute2.core =={{ version }}
+        - importlib-metadata
+    test:
+      imports:
+        - pyroute2
+      commands:
+        - pip check
+      requires:
+        - pip
+    about:
+      home: https://github.com/svinota/pyroute2
+      summary: 'Python Netlink library: minimal installation'
+      license: GPL-2.0-or-later OR Apache-2.0
+      license_file:
+        - LICENSE.GPL.v2
+        - LICENSE.Apache.v2
+
+  - name: pyroute2
+    build:
+      noarch: python
+      script:
+        - cd pyroute2
+        - {{ PYTHON }} -m pip install --no-deps . -vv
+    requirements:
+      host:
+        - python >=3.6
+        - pip
+      run:
+        - python >=3.6
+        - pyroute2.core =={{ version }}
+        - pyroute2.ethtool =={{ version }}
+        - pyroute2.ipdb =={{ version }}
+        - pyroute2.ipset =={{ version }}
+        - pyroute2.ndb =={{ version }}
+        - pyroute2.nftables =={{ version }}
+        - pyroute2.nslink =={{ version }}
+        - importlib-metadata
+    test:
+      imports:
+        - pyroute2
+      commands:
+        - pip check
+      requires:
+        - pip
+    about:
+      home: https://github.com/svinota/pyroute2
+      summary: Python Netlink library
+      license: GPL-2.0-or-later OR Apache-2.0
+      license_file:
+        - LICENSE.GPL.v2
+        - LICENSE.Apache.v2
 
 about:
   home: https://github.com/svinota/pyroute2
   summary: Python Netlink library
-  license: GPL-2.0-or-later
-  license_file: LICENSE.GPL.v2
+  license: GPL-2.0-or-later OR Apache-2.0
+  license_file:
+    - LICENSE.GPL.v2
+    - LICENSE.Apache.v2
 
 extra:
+  feedstock-name: pyroute2
   recipe-maintainers:
     - nehaljwani
