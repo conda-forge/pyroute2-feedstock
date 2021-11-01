@@ -3,117 +3,21 @@ About pyroute2
 
 Home: https://github.com/svinota/pyroute2
 
-Package license: GPL-2.0-or-later
+Package license: GPL-2.0-or-later OR Apache-2.0
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyroute2-feedstock/blob/master/LICENSE.txt)
 
-Summary: Python Netlink library
+Summary: Python Netlink library: the core
 
 Current build status
 ====================
 
 
-<table>
-    
-  <tr>
-    <td>Azure</td>
+<table><tr><td>All platforms:</td>
     <td>
-      <details>
-        <summary>
-          <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14080&branchName=master">
-            <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyroute2-feedstock?branchName=master">
-          </a>
-        </summary>
-        <table>
-          <thead><tr><th>Variant</th><th>Status</th></tr></thead>
-          <tbody><tr>
-              <td>linux_64_python3.7.____73_pypy</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14080&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyroute2-feedstock?branchName=master&jobName=linux&configuration=linux_64_python3.7.____73_pypy" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_64_python3.7.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14080&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyroute2-feedstock?branchName=master&jobName=linux&configuration=linux_64_python3.7.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_64_python3.8.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14080&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyroute2-feedstock?branchName=master&jobName=linux&configuration=linux_64_python3.8.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_64_python3.9.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14080&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyroute2-feedstock?branchName=master&jobName=linux&configuration=linux_64_python3.9.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_python3.7.____73_pypy</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14080&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyroute2-feedstock?branchName=master&jobName=osx&configuration=osx_64_python3.7.____73_pypy" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_python3.7.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14080&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyroute2-feedstock?branchName=master&jobName=osx&configuration=osx_64_python3.7.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_python3.8.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14080&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyroute2-feedstock?branchName=master&jobName=osx&configuration=osx_64_python3.8.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_python3.9.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14080&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyroute2-feedstock?branchName=master&jobName=osx&configuration=osx_64_python3.9.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_python3.7.____73_pypy</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14080&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyroute2-feedstock?branchName=master&jobName=win&configuration=win_64_python3.7.____73_pypy" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_python3.7.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14080&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyroute2-feedstock?branchName=master&jobName=win&configuration=win_64_python3.7.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_python3.8.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14080&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyroute2-feedstock?branchName=master&jobName=win&configuration=win_64_python3.8.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_python3.9.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14080&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyroute2-feedstock?branchName=master&jobName=win&configuration=win_64_python3.9.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </details>
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14080&branchName=master">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyroute2-feedstock?branchName=master">
+      </a>
     </td>
   </tr>
 </table>
@@ -124,6 +28,14 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-pyroute2-green.svg)](https://anaconda.org/conda-forge/pyroute2) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pyroute2.svg)](https://anaconda.org/conda-forge/pyroute2) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pyroute2.svg)](https://anaconda.org/conda-forge/pyroute2) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pyroute2.svg)](https://anaconda.org/conda-forge/pyroute2) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pyroute2.core-green.svg)](https://anaconda.org/conda-forge/pyroute2.core) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pyroute2.core.svg)](https://anaconda.org/conda-forge/pyroute2.core) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pyroute2.core.svg)](https://anaconda.org/conda-forge/pyroute2.core) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pyroute2.core.svg)](https://anaconda.org/conda-forge/pyroute2.core) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pyroute2.ethtool-green.svg)](https://anaconda.org/conda-forge/pyroute2.ethtool) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pyroute2.ethtool.svg)](https://anaconda.org/conda-forge/pyroute2.ethtool) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pyroute2.ethtool.svg)](https://anaconda.org/conda-forge/pyroute2.ethtool) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pyroute2.ethtool.svg)](https://anaconda.org/conda-forge/pyroute2.ethtool) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pyroute2.ipdb-green.svg)](https://anaconda.org/conda-forge/pyroute2.ipdb) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pyroute2.ipdb.svg)](https://anaconda.org/conda-forge/pyroute2.ipdb) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pyroute2.ipdb.svg)](https://anaconda.org/conda-forge/pyroute2.ipdb) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pyroute2.ipdb.svg)](https://anaconda.org/conda-forge/pyroute2.ipdb) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pyroute2.ipset-green.svg)](https://anaconda.org/conda-forge/pyroute2.ipset) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pyroute2.ipset.svg)](https://anaconda.org/conda-forge/pyroute2.ipset) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pyroute2.ipset.svg)](https://anaconda.org/conda-forge/pyroute2.ipset) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pyroute2.ipset.svg)](https://anaconda.org/conda-forge/pyroute2.ipset) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pyroute2.minimal-green.svg)](https://anaconda.org/conda-forge/pyroute2.minimal) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pyroute2.minimal.svg)](https://anaconda.org/conda-forge/pyroute2.minimal) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pyroute2.minimal.svg)](https://anaconda.org/conda-forge/pyroute2.minimal) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pyroute2.minimal.svg)](https://anaconda.org/conda-forge/pyroute2.minimal) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pyroute2.ndb-green.svg)](https://anaconda.org/conda-forge/pyroute2.ndb) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pyroute2.ndb.svg)](https://anaconda.org/conda-forge/pyroute2.ndb) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pyroute2.ndb.svg)](https://anaconda.org/conda-forge/pyroute2.ndb) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pyroute2.ndb.svg)](https://anaconda.org/conda-forge/pyroute2.ndb) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pyroute2.nftables-green.svg)](https://anaconda.org/conda-forge/pyroute2.nftables) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pyroute2.nftables.svg)](https://anaconda.org/conda-forge/pyroute2.nftables) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pyroute2.nftables.svg)](https://anaconda.org/conda-forge/pyroute2.nftables) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pyroute2.nftables.svg)](https://anaconda.org/conda-forge/pyroute2.nftables) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pyroute2.nslink-green.svg)](https://anaconda.org/conda-forge/pyroute2.nslink) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pyroute2.nslink.svg)](https://anaconda.org/conda-forge/pyroute2.nslink) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pyroute2.nslink.svg)](https://anaconda.org/conda-forge/pyroute2.nslink) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pyroute2.nslink.svg)](https://anaconda.org/conda-forge/pyroute2.nslink) |
 
 Installing pyroute2
 ===================
@@ -135,10 +47,10 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `pyroute2` can be installed with:
+Once the `conda-forge` channel has been enabled, `pyroute2, pyroute2.core, pyroute2.ethtool, pyroute2.ipdb, pyroute2.ipset, pyroute2.minimal, pyroute2.ndb, pyroute2.nftables, pyroute2.nslink` can be installed with:
 
 ```
-conda install pyroute2
+conda install pyroute2 pyroute2.core pyroute2.ethtool pyroute2.ipdb pyroute2.ipset pyroute2.minimal pyroute2.ndb pyroute2.nftables pyroute2.nslink
 ```
 
 It is possible to list all of the versions of `pyroute2` available on your platform with:
