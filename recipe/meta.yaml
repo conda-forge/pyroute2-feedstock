@@ -1,5 +1,5 @@
 {% set name = "pyroute2" %}
-{% set version = "0.6.5" %}
+{% set version = "0.6.6" %}
 
 package:
   name: {{ name|lower }}-split
@@ -7,43 +7,43 @@ package:
 
 source:
   - url: https://pypi.io/packages/source/p/pyroute2/pyroute2-{{ version }}.tar.gz
-    sha256: d0995c8aeb96c0e4eed4d62e97c9d795000a1a33b747d6dc54326665857cf11c
+    sha256: 0eac82c06f12d260fba6adb800541d1e83c7715f64efeb272b3d6841610a60b4
     folder: pyroute2
 
   - url: https://pypi.io/packages/source/p/pyroute2.core/pyroute2.core-{{ version }}.tar.gz
-    sha256: 266d740eae40fa64dd04541f007d34db696cecf3154cba5be30fa75a67d43852
+    sha256: ae5784d96b7afa84344bb61a2c8b5987db1cb848c75267548b325dc9d7e3a216
     folder: pyroute2.core
 
   - url: https://pypi.io/packages/source/p/pyroute2.ethtool/pyroute2.ethtool-{{ version }}.tar.gz
-    sha256: caf8014b676521135c4760d72cf5aeef6abbc7fa275210f7e95333073cc7715a
+    sha256: 79ba78674517fdcd6482074c32defb2421b9b48d6a1f9ab7c15b990828826631
     folder: pyroute2.ethtool
 
   - url: https://pypi.io/packages/source/p/pyroute2.ipdb/pyroute2.ipdb-{{ version }}.tar.gz
-    sha256: f2028fd1013d8af888150d033eecf7537657a4be37e0cccea9800809961eb577
+    sha256: cb24891746d6a56a62674a047f09cc3f97c2918af95d2ba55e73c0930936d006
     folder: pyroute2.ipdb
 
   - url: https://pypi.io/packages/source/p/pyroute2.ipset/pyroute2.ipset-{{ version }}.tar.gz
-    sha256: ae527c0f999748230a1f688d9a2b7c257b2df6d74369f44eca530d007793b79d
+    sha256: 93898ca5701021703bfb98a0e39fa7e70f3b77d150d147cc46ece0b64b9e2ff3
     folder: pyroute2.ipset
 
   - url: https://pypi.io/packages/source/p/pyroute2.ndb/pyroute2.ndb-{{ version }}.tar.gz
-    sha256: a4d309584e9ef6c7842af4f832b48fc5344ab225e70e384baed1b7fe2b94d9f8
+    sha256: 4dc8927740df3ab74831794f1062b3467446464582591d6dd2a678f0272dddee
     folder: pyroute2.ndb
 
   - url: https://pypi.io/packages/source/p/pyroute2.nftables/pyroute2.nftables-{{ version }}.tar.gz
-    sha256: b1455a63a3efc050d108d550d1cafd011edded6e894d99e7bdfa02d592bf6f16
+    sha256: f35fc545af55d379dc776b840118d0d2ee0e5cbafd9093c4388c51f69957dd1c
     folder: pyroute2.nftables
 
   - url: https://pypi.io/packages/source/p/pyroute2.nslink/pyroute2.nslink-{{ version }}.tar.gz
-    sha256: 292e6c2832a73544c1c6d5ba727f7117aa847e55f88d78e94b7d4607b299999e
+    sha256: 5cc88050cf95a82db8cae786fcfa6fe654f4f114f969bbca6c3adf126f8eca51
     folder: pyroute2.nslink
 
   - url: https://pypi.io/packages/source/p/pyroute2.minimal/pyroute2.minimal-{{ version }}.tar.gz
-    sha256: e5b641945c8997bd6ebcf7cd4ec83a4b940151c8a065ef995e4e5c0adfcb73ac
+    sha256: c39222d0d7c383dc7b2cee9be902ddb8fc0aeb53c061d984a444bc4db6a1c60d
     folder: pyroute2.minimal
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   host:
