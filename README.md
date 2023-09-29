@@ -1,13 +1,98 @@
+About pyroute2-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyroute2-feedstock/blob/main/LICENSE.txt)
+
+
 About pyroute2
-==============
+--------------
 
 Home: https://github.com/svinota/pyroute2
 
 Package license: GPL-2.0-or-later OR Apache-2.0
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyroute2-feedstock/blob/main/LICENSE.txt)
+Summary: Python Netlink library
+
+About pyroute2.core
+-------------------
+
+Home: https://github.com/svinota/pyroute2
+
+Package license: GPL-2.0-or-later OR Apache-2.0
 
 Summary: Python Netlink library: the core
+
+About pyroute2.ethtool
+----------------------
+
+Home: https://github.com/svinota/pyroute2
+
+Package license: GPL-2.0-or-later OR Apache-2.0
+
+Summary: Python Netlink library: ethtool
+
+About pyroute2.ipdb
+-------------------
+
+Home: https://github.com/svinota/pyroute2
+
+Package license: GPL-2.0-or-later OR Apache-2.0
+
+Summary: Python Netlink library: IPDB module
+
+About pyroute2.ipset
+--------------------
+
+Home: https://github.com/svinota/pyroute2
+
+Package license: GPL-2.0-or-later OR Apache-2.0
+
+Summary: Python Netlink library: ipset
+
+About pyroute2.minimal
+----------------------
+
+Home: https://github.com/svinota/pyroute2
+
+Package license: GPL-2.0-or-later OR Apache-2.0
+
+Summary: Python Netlink library: minimal installation
+
+About pyroute2.nftables
+-----------------------
+
+Home: https://github.com/svinota/pyroute2
+
+Package license: GPL-2.0-or-later OR Apache-2.0
+
+Summary: Python Netlink library: nftables
+
+About pyroute2.nslink
+---------------------
+
+Home: https://github.com/svinota/pyroute2
+
+Package license: GPL-2.0-or-later OR Apache-2.0
+
+Summary: Python Netlink library: NetNS, NSPopen and remote modules
+
+About pyroute2.ndb
+------------------
+
+Home: https://github.com/svinota/pyroute2
+
+Package license: GPL-2.0-or-later OR Apache-2.0
+
+Summary: Python Netlink library: NDB module
+
+About pyroute2
+--------------
+
+Home: https://github.com/svinota/pyroute2
+
+Package license: GPL-2.0-or-later OR Apache-2.0
+
+Summary: Python Netlink library
 
 Current build status
 ====================
