@@ -43,6 +43,7 @@ source:
     folder: pyroute2.minimal
 
 build:
+  noarch: python
   number: 2
 
 requirements:
