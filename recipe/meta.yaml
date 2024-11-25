@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  - url: https://pypi.io/packages/source/p/pyroute2/pyroute2-{{ version }}.tar.gz
+  - url: https://pypi.org/packages/source/p/pyroute2/pyroute2-{{ version }}.tar.gz
     sha256: 54d226fc3ff2732f49bac9b26853c50c9d05be05a4d9daf09c7cf6d77301eff3
     folder: pyroute2
 
@@ -38,7 +38,7 @@ source:
     sha256: 54d226fc3ff2732f49bac9b26853c50c9d05be05a4d9daf09c7cf6d77301eff3
     folder: pyroute2.nslink
 
-  - url: https://pypi.io/packages/source/p/pyroute2.minimal/pyroute2.minimal-{{ version }}.tar.gz
+  - url: https://pypi.org/packages/source/p/pyroute2.minimal/pyroute2.minimal-{{ version }}.tar.gz
     sha256: 64e6c923e45e4b1783f019497468ff4e77abbd8bb88a7f21288cb7dd37399276
     folder: pyroute2.minimal
 
