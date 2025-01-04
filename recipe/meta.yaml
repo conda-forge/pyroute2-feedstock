@@ -6,51 +6,51 @@ package:
   version: {{ version }}
 
 source:
-  - url: https://pypi.io/packages/source/p/pyroute2/pyroute2-{{ version }}.tar.gz
+  - url: https://pypi.org/packages/source/p/pyroute2/pyroute2-{{ version }}.tar.gz
     sha256: b03d49a581945fec2b1ec7d1d5125c6f40ba04ed11affc90c4caddc019e25792
     folder: pyroute2
 
-  - url: https://pypi.io/packages/source/p/pyroute2.core/pyroute2.core-{{ version }}.tar.gz
+  - url: https://pypi.org/packages/source/p/pyroute2.core/pyroute2.core-{{ version }}.tar.gz
     sha256: 227dfd9f19888ddd1341966822ffd5880db9e3c89375096418c660ff4d1a11d0
     folder: pyroute2.core
 
-  - url: https://pypi.io/packages/source/p/pyroute2.ethtool/pyroute2.ethtool-{{ version }}.tar.gz
+  - url: https://pypi.org/packages/source/p/pyroute2.ethtool/pyroute2.ethtool-{{ version }}.tar.gz
     sha256: 0a687fea0fcd77d9074c7c18ba35d9b9f70e4217ebe68a687e200408473a3bd4
     folder: pyroute2.ethtool
 
-  - url: https://pypi.io/packages/source/p/pyroute2.ipdb/pyroute2.ipdb-{{ version }}.tar.gz
+  - url: https://pypi.org/packages/source/p/pyroute2.ipdb/pyroute2.ipdb-{{ version }}.tar.gz
     sha256: bbbbb75d13be96e4549cf70eb94fd70b2e1736ea301ac6b683f56aa1acd84d5a
     folder: pyroute2.ipdb
 
-  - url: https://pypi.io/packages/source/p/pyroute2.ipset/pyroute2.ipset-{{ version }}.tar.gz
+  - url: https://pypi.org/packages/source/p/pyroute2.ipset/pyroute2.ipset-{{ version }}.tar.gz
     sha256: 28a254f622a18976d0683603d5aefda5ab7c8528fa9e36beb85bce52026f7866
     folder: pyroute2.ipset
 
-  - url: https://pypi.io/packages/source/p/pyroute2.ndb/pyroute2.ndb-{{ version }}.tar.gz
+  - url: https://pypi.org/packages/source/p/pyroute2.ndb/pyroute2.ndb-{{ version }}.tar.gz
     sha256: 09b1f55f26043ce64c933e8224fd08444a498f381e5dc483bc9f428cbaf0901a
     folder: pyroute2.ndb
 
-  - url: https://pypi.io/packages/source/p/pyroute2.nftables/pyroute2.nftables-{{ version }}.tar.gz
+  - url: https://pypi.org/packages/source/p/pyroute2.nftables/pyroute2.nftables-{{ version }}.tar.gz
     sha256: c94bd740d50b03a1a8d9654f769e77afc77a75e05fc5887dd0551e3970f86592
     folder: pyroute2.nftables
 
-  - url: https://pypi.io/packages/source/p/pyroute2.nslink/pyroute2.nslink-{{ version }}.tar.gz
+  - url: https://pypi.org/packages/source/p/pyroute2.nslink/pyroute2.nslink-{{ version }}.tar.gz
     sha256: 86ed506cadccb154cd27aebb3dbf73ebb723c391104e7f0f3bc2c4a39c62366c
     folder: pyroute2.nslink
 
-  - url: https://pypi.io/packages/source/p/pyroute2.minimal/pyroute2.minimal-{{ version }}.tar.gz
+  - url: https://pypi.org/packages/source/p/pyroute2.minimal/pyroute2.minimal-{{ version }}.tar.gz
     sha256: 74c3abfce19225a467dd3312dfd80310d5a9cc886370eafc16125d0527496117
     folder: pyroute2.minimal
 
 build:
   noarch: python
-  number: 2
+  number: 3
 
 requirements:
   host:
-    - python
+    - python {{ python_min }}
   run:
-    - python
+    - python >={{ python_min }}
 
 outputs:
   - name: pyroute2.core
@@ -61,10 +61,10 @@ outputs:
         - {{ PYTHON }} -m pip install --no-deps . -vv
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}
         - pip
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - psutil >=5.0
     test:
       imports:
@@ -74,6 +74,7 @@ outputs:
         - pip check
       requires:
         - pip
+        - python {{ python_min }}
     about:
       home: https://github.com/svinota/pyroute2
       summary: 'Python Netlink library: the core'
@@ -90,10 +91,10 @@ outputs:
         - {{ PYTHON }} -m pip install --no-deps . -vv
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}
         - pip
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - pyroute2.core
     test:
       imports:
@@ -104,6 +105,7 @@ outputs:
         - pip check
       requires:
         - pip
+        - python {{ python_min }}
     about:
       home: https://github.com/svinota/pyroute2
       summary: 'Python Netlink library: ethtool'
@@ -120,10 +122,10 @@ outputs:
         - {{ PYTHON }} -m pip install --no-deps . -vv
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}
         - pip
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - pyroute2.core
     test:
       imports:
@@ -133,6 +135,7 @@ outputs:
         - pip check
       requires:
         - pip
+        - python {{ python_min }}
     about:
       home: https://github.com/svinota/pyroute2
       summary: 'Python Netlink library: IPDB module'
@@ -149,10 +152,10 @@ outputs:
         - {{ PYTHON }} -m pip install --no-deps . -vv
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}
         - pip
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - pyroute2.core
     test:
       imports:
@@ -161,6 +164,7 @@ outputs:
         - pip check
       requires:
         - pip
+        - python {{ python_min }}
     about:
       home: https://github.com/svinota/pyroute2
       summary: 'Python Netlink library: ipset'
@@ -179,10 +183,10 @@ outputs:
         - {{ PYTHON }} -m pip install --no-deps . -vv
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}
         - pip
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - pyroute2.core
         - pyroute2.nslink
     test:
@@ -194,6 +198,7 @@ outputs:
         - pyroute2-cli --help
       requires:
         - pip
+        - python {{ python_min }}
     about:
       home: https://github.com/svinota/pyroute2
       summary: 'Python Netlink library: NDB module'
@@ -210,10 +215,10 @@ outputs:
         - {{ PYTHON }} -m pip install --no-deps . -vv
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}
         - pip
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - pyroute2.core
     test:
       imports:
@@ -223,6 +228,7 @@ outputs:
         - pip check
       requires:
         - pip
+        - python {{ python_min }}
     about:
       home: https://github.com/svinota/pyroute2
       summary: 'Python Netlink library: nftables'
@@ -239,10 +245,10 @@ outputs:
         - {{ PYTHON }} -m pip install --no-deps . -vv
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}
         - pip
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - pyroute2.core
     test:
       imports:
@@ -252,6 +258,7 @@ outputs:
         - pip check
       requires:
         - pip
+        - python {{ python_min }}
     about:
       home: https://github.com/svinota/pyroute2
       summary: 'Python Netlink library: NetNS, NSPopen and remote modules'
@@ -268,10 +275,10 @@ outputs:
         - {{ PYTHON }} -m pip install --no-deps . -vv
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}
         - pip
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - pyroute2.core =={{ version }}
         - importlib-metadata
     test:
@@ -281,6 +288,7 @@ outputs:
         - pip check
       requires:
         - pip
+        - python {{ python_min }}
     about:
       home: https://github.com/svinota/pyroute2
       summary: 'Python Netlink library: minimal installation'
@@ -297,10 +305,10 @@ outputs:
         - {{ PYTHON }} -m pip install --no-deps . -vv
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}
         - pip
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - pyroute2.core =={{ version }}
         - pyroute2.ethtool =={{ version }}
         - pyroute2.ipdb =={{ version }}
@@ -316,6 +324,7 @@ outputs:
         - pip check
       requires:
         - pip
+        - python {{ python_min }}
     about:
       home: https://github.com/svinota/pyroute2
       summary: Python Netlink library
