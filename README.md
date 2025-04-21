@@ -3,91 +3,6 @@ About pyroute2-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyroute2-feedstock/blob/main/LICENSE.txt)
 
-
-About pyroute2
---------------
-
-Home: https://github.com/svinota/pyroute2
-
-Package license: GPL-2.0-or-later OR Apache-2.0
-
-Summary: Python Netlink library
-
-About pyroute2.core
--------------------
-
-Home: https://github.com/svinota/pyroute2
-
-Package license: GPL-2.0-or-later OR Apache-2.0
-
-Summary: Python Netlink library: the core
-
-About pyroute2.ethtool
-----------------------
-
-Home: https://github.com/svinota/pyroute2
-
-Package license: GPL-2.0-or-later OR Apache-2.0
-
-Summary: Python Netlink library: ethtool
-
-About pyroute2.ipdb
--------------------
-
-Home: https://github.com/svinota/pyroute2
-
-Package license: GPL-2.0-or-later OR Apache-2.0
-
-Summary: Python Netlink library: IPDB module
-
-About pyroute2.ipset
---------------------
-
-Home: https://github.com/svinota/pyroute2
-
-Package license: GPL-2.0-or-later OR Apache-2.0
-
-Summary: Python Netlink library: ipset
-
-About pyroute2.minimal
-----------------------
-
-Home: https://github.com/svinota/pyroute2
-
-Package license: GPL-2.0-or-later OR Apache-2.0
-
-Summary: Python Netlink library: minimal installation
-
-About pyroute2.nftables
------------------------
-
-Home: https://github.com/svinota/pyroute2
-
-Package license: GPL-2.0-or-later OR Apache-2.0
-
-Summary: Python Netlink library: nftables
-
-About pyroute2.nslink
----------------------
-
-Home: https://github.com/svinota/pyroute2
-
-Package license: GPL-2.0-or-later OR Apache-2.0
-
-Summary: Python Netlink library: NetNS, NSPopen and remote modules
-
-About pyroute2.ndb
-------------------
-
-Home: https://github.com/svinota/pyroute2
-
-Package license: GPL-2.0-or-later OR Apache-2.0
-
-Summary: Python Netlink library: NDB module
-
-About pyroute2
---------------
-
 Home: https://github.com/svinota/pyroute2
 
 Package license: GPL-2.0-or-later OR Apache-2.0
@@ -113,14 +28,6 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-pyroute2-green.svg)](https://anaconda.org/conda-forge/pyroute2) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pyroute2.svg)](https://anaconda.org/conda-forge/pyroute2) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pyroute2.svg)](https://anaconda.org/conda-forge/pyroute2) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pyroute2.svg)](https://anaconda.org/conda-forge/pyroute2) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-pyroute2.core-green.svg)](https://anaconda.org/conda-forge/pyroute2.core) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pyroute2.core.svg)](https://anaconda.org/conda-forge/pyroute2.core) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pyroute2.core.svg)](https://anaconda.org/conda-forge/pyroute2.core) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pyroute2.core.svg)](https://anaconda.org/conda-forge/pyroute2.core) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-pyroute2.ethtool-green.svg)](https://anaconda.org/conda-forge/pyroute2.ethtool) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pyroute2.ethtool.svg)](https://anaconda.org/conda-forge/pyroute2.ethtool) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pyroute2.ethtool.svg)](https://anaconda.org/conda-forge/pyroute2.ethtool) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pyroute2.ethtool.svg)](https://anaconda.org/conda-forge/pyroute2.ethtool) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-pyroute2.ipdb-green.svg)](https://anaconda.org/conda-forge/pyroute2.ipdb) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pyroute2.ipdb.svg)](https://anaconda.org/conda-forge/pyroute2.ipdb) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pyroute2.ipdb.svg)](https://anaconda.org/conda-forge/pyroute2.ipdb) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pyroute2.ipdb.svg)](https://anaconda.org/conda-forge/pyroute2.ipdb) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-pyroute2.ipset-green.svg)](https://anaconda.org/conda-forge/pyroute2.ipset) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pyroute2.ipset.svg)](https://anaconda.org/conda-forge/pyroute2.ipset) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pyroute2.ipset.svg)](https://anaconda.org/conda-forge/pyroute2.ipset) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pyroute2.ipset.svg)](https://anaconda.org/conda-forge/pyroute2.ipset) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-pyroute2.minimal-green.svg)](https://anaconda.org/conda-forge/pyroute2.minimal) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pyroute2.minimal.svg)](https://anaconda.org/conda-forge/pyroute2.minimal) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pyroute2.minimal.svg)](https://anaconda.org/conda-forge/pyroute2.minimal) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pyroute2.minimal.svg)](https://anaconda.org/conda-forge/pyroute2.minimal) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-pyroute2.ndb-green.svg)](https://anaconda.org/conda-forge/pyroute2.ndb) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pyroute2.ndb.svg)](https://anaconda.org/conda-forge/pyroute2.ndb) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pyroute2.ndb.svg)](https://anaconda.org/conda-forge/pyroute2.ndb) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pyroute2.ndb.svg)](https://anaconda.org/conda-forge/pyroute2.ndb) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-pyroute2.nftables-green.svg)](https://anaconda.org/conda-forge/pyroute2.nftables) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pyroute2.nftables.svg)](https://anaconda.org/conda-forge/pyroute2.nftables) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pyroute2.nftables.svg)](https://anaconda.org/conda-forge/pyroute2.nftables) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pyroute2.nftables.svg)](https://anaconda.org/conda-forge/pyroute2.nftables) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-pyroute2.nslink-green.svg)](https://anaconda.org/conda-forge/pyroute2.nslink) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pyroute2.nslink.svg)](https://anaconda.org/conda-forge/pyroute2.nslink) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pyroute2.nslink.svg)](https://anaconda.org/conda-forge/pyroute2.nslink) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pyroute2.nslink.svg)](https://anaconda.org/conda-forge/pyroute2.nslink) |
 
 Installing pyroute2
 ===================
@@ -132,16 +39,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `pyroute2, pyroute2.core, pyroute2.ethtool, pyroute2.ipdb, pyroute2.ipset, pyroute2.minimal, pyroute2.ndb, pyroute2.nftables, pyroute2.nslink` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `pyroute2` can be installed with `conda`:
 
 ```
-conda install pyroute2 pyroute2.core pyroute2.ethtool pyroute2.ipdb pyroute2.ipset pyroute2.minimal pyroute2.ndb pyroute2.nftables pyroute2.nslink
+conda install pyroute2
 ```
 
 or with `mamba`:
 
 ```
-mamba install pyroute2 pyroute2.core pyroute2.ethtool pyroute2.ipdb pyroute2.ipset pyroute2.minimal pyroute2.ndb pyroute2.nftables pyroute2.nslink
+mamba install pyroute2
 ```
 
 It is possible to list all of the versions of `pyroute2` available on your platform with `conda`:
@@ -188,7 +95,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
