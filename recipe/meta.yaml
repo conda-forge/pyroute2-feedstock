@@ -66,12 +66,14 @@ test:
   {% endif %}
   commands:
     - pip check
+  {% if virtual_pkg == "__unix" %}
     - ss2 --help
     - pyroute2-cli --help
     - pyroute2-decoder --help
     - pyroute2-dhcp-client --help
     - pyroute2-test-platform --help
     - dhcp-server-detector --help
+  {% endif %}
   requires:
     - pip
     - python {{ python_min }}
