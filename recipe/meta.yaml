@@ -36,6 +36,8 @@ requirements:
   {% endif %}
 
 test:
+  {% if virtual_pkg == "__unix" %}
+  # On Windows: No module named 'fcntl'
   imports:
     - pyroute2
     - pyroute2.bsd
@@ -61,6 +63,7 @@ test:
     - pyroute2.netns
     - pyroute2.protocols
     - pyroute2.requests
+  {% endif %}
   commands:
     - pip check
     - ss2 --help
