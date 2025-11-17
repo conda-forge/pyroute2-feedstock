@@ -1,5 +1,5 @@
 {% set name = "pyroute2" %}
-{% set version = "0.9.4" %}
+{% set version = "0.9.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyroute2-{{ version }}.tar.gz
-  sha256: 3cbccbe1af0c2b2aeae81b327e0e91aa94c81ab19f851e74b26bef70202f3070
+  sha256: a198ccbe545b031b00b10da4b44df33d548db04af944be8107c05a215ba03872
 
 build:
   noarch: python
