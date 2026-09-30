@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pyroute2
-  version: "0.9.5"
+  version: "0.9.6"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pyroute2-${{ version }}.tar.gz
-  sha256: a198ccbe545b031b00b10da4b44df33d548db04af944be8107c05a215ba03872
+  sha256: 6bc5e2ea9a372ded682b4ede4028ba00236bd6e35b42d833f39a96b219ef1db2
 
 build:
   number: 0
